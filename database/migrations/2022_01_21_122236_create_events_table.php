@@ -15,14 +15,14 @@ class CreateEventsTable extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->title();
-            $table->image();
-            $table->description();
-            $table->date();
-            $table->hour();
-            $table->current_capacity();
-            $table->max_capacity();
-            $table->location_id();
+            $table->string('title');
+            $table->string('image');
+            $table->text('description');
+            $table->string('date');
+            $table->string('hour');
+            $table->integer('current_capacity');
+            $table->integer('max_capacity');
+            $table->unsignedBigInteger('location_id');
             $table->timestamps();
         });
     }
