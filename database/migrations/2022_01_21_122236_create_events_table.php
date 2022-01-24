@@ -24,6 +24,8 @@ class CreateEventsTable extends Migration
             $table->integer('max_capacity');
             $table->unsignedBigInteger('location_id');
             $table->timestamps();
+
+            $table->foreign('location_id')->references('id')->on('locations')->cascadeOnDelete();
         });
     }
 
