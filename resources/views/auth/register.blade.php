@@ -18,6 +18,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -30,10 +32,10 @@
             <div class="card" >
             <ul class="nav">
                     <li class="nav-item">
-                      <a class="nav-link" href="resources\views\auth\login.blade.php">Login</a>
+                      <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link.active" href="resources\views\auth\register.blade.php">Register</a>
+                      <a class="nav-link active" href="{{ route('register') }}">Register</a>
                     </li>
             </ul>
 
@@ -49,7 +51,12 @@
                             <label for="name" class="col-md-4 col-form-label text-md-end"></label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="&#xf007; Name"/>
+
+                            <div class="input-group mb-3">
+                                 <span class="input-group-text" id="basic-addon1"> <i class="fas fa-user"></i></span>
+
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Name">
+                            </div>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -58,12 +65,18 @@
                                 @enderror
                             </div>
                         </div>
+    
 
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end"></label>
 
                             <div class="col-md-6">
+                            
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1"> <i class="fas fa-envelope-square"></i></span>
+
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="E-Mail Address">
+                            </div>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -77,7 +90,12 @@
                             <label for="password" class="col-md-4 col-form-label text-md-end"></label>
 
                             <div class="col-md-6">
+
+                            <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"> <i class="fas fa-unlock-alt"></i></span>
+
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password">
+                            </div>
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -91,7 +109,11 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end"></label>
 
                             <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"> <i class="fas fa-unlock-alt"></i></span>
+
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Password">
+                                </div>
                             </div>
                         </div>               
                     </form>
@@ -104,7 +126,7 @@
                             </div>
                         
                             <div>
-                            <a class="loginLink" href="resources\views\auth\login.blade.php">¿Ya tienes cuenta? Inicia sesión aquí</a>
+                            <a class="loginLink" href="{{ route('login') }}">¿Ya tienes cuenta? Inicia sesión aquí</a>
                             </div>
                     </div>
                 </div>

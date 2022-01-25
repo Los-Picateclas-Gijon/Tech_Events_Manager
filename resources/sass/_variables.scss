@@ -13,13 +13,13 @@ $letters_navBar_login_register: #5865F2;
 
 #register_button{
     background-color: $register_button-color;
+    border-radius:20%;
+    margin-inline-start: 25%;
+    height: 85%;  
 }
+
 .nav-link.active{
     color: $letters_navBar_login_register;
     border-bottom: 3px solid $letters_navBar_login_register;
-    }
-
-.register_Header_Letters{
-   
-    $font-family-sans-serif
 }
+
