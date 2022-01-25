@@ -5,3 +5,21 @@ $body-bg: #f8fafc;
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+
+//Register button and letters
+$register_button-color: #7879F1;
+$letters_navBar_login_register: #5865F2;
+
+#register_button{
+    background-color: $register_button-color;
+}
+.nav-link.active{
+    color: $letters_navBar_login_register;
+    border-bottom: 3px solid $letters_navBar_login_register;
+    }
+
+.register_Header_Letters{
+   
+    $font-family-sans-serif
+}
