@@ -68,7 +68,7 @@
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1"> <i class="fas fa-unlock-alt"></i></span>
                                 <input id="password" type="password" class=" form-control @error('password') is-invalid @enderror  " name="password" required autocomplete="current-password" placeholder="Password ">
-                                </div>
+                                
                                 </div>
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -86,7 +86,7 @@
                                     {{ __('Login') }}
                                 </button>
                                 <div class="text">
-                                <u text-align: center; >¿No tienes cuenta?Resgístrate aquí</u>
+                                <u  >¿No tienes cuenta?Resgístrate aquí</u>
                                 <u>¿Has olvidado tu contraseña?</u>
                                 </div>
                             </div>

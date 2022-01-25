@@ -7,8 +7,10 @@ $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 #boton{
     background-color: $button-color;
-    border-radius: 40%;
+    border-radius:20%;
     margin-inline-start: 25%;
+    height: 85%;
+    
     
 }
 .text{
@@ -21,5 +23,12 @@ $line-height-base: 1.6;
 .nav-link.active{
     color: #5865F2;
     border-bottom: 3px solid #5865F2;;
-    }
+ }
+
+ .navCenter{
+     display: flex;
+     flex-direction: column;
+     
+     
+ }
 
