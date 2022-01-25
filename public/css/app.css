@@ -1,5 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
+#register_button {
+  background-color: #7879F1;
+}
+
+.nav-link.active {
+  color: #5865F2;
+  border-bottom: 3px solid #5865F2;
+}
+
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
