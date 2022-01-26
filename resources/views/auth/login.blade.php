@@ -86,7 +86,7 @@
                                     {{ __('Login') }}
                                 </button>
                                 <div class="text">
-                                <u  >¿No tienes cuenta?Resgístrate aquí</u>
+                                    <a class="nav-link " href="{{ route('register') }}">  <u >¿No tienes cuenta?Resgístrate aquí</u></a>
                                 <u>¿Has olvidado tu contraseña?</u>
                                 </div>
                             </div>

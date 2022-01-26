@@ -4608,7 +4608,7 @@ readers do not read off random characters that represent icons */
 @charset "UTF-8";
 #boton {
   background-color: #7879F1;
-  border-radius: 20%;
+  border-radius: 40%;
   -webkit-margin-start: 25%;
           margin-inline-start: 25%;
   height: 85%;
