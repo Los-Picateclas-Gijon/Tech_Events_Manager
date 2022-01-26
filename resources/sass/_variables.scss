@@ -2,6 +2,40 @@
 $body-bg: #f8fafc;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-sans-serif: 'Poppins', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+$white-text: #FCFCFC;
+
+// Header
+$header-bg: #98ABF1;
+
+// Footer
+$footer-bg: #98ABF1;
+
+// Buttons
+$login-btn: #7879F1;
+$register-btn: #5D5FEF;
+$header-btn: 5rem;
+
+
+#header {
+    background-color: $header-bg;
+    height: 10%;
+}
+
+#footer {
+    background-color: $footer-bg;
+    height: 10%;
+}
+
+#login-btn {
+    background-color: $login-btn;
+    color: $white-text;
+}
+
+#register-btn {
+    background-color: $register-btn;
+    color: $white-text;
+    width: $header-btn;
+}
