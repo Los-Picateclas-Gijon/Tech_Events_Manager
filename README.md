@@ -64,3 +64,23 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# TECH_EVENTS_MANAGER
+## Installation
+
+    -Laravel
+    -Composer
+    
+    composer install
+    npm install && npm run dev
+
+### Author
+
+    -Picateclas Team
+
+#### Contributors
+    - Caio da Silva
+    - Diego Cortina
+    - Marlene Luelmo
+    - Sara Gonzalez
+    - Sasha Bidartel
