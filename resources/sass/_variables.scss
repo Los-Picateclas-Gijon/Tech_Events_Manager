@@ -13,9 +13,10 @@ $letters_navBar_login_register: #5865F2;
 
 #register_button{
     background-color: $register_button-color;
-    border-radius:20%;
-    margin-inline-start: 25%;
-    height: 85%;  
+    border-radius: 15%;
+    width: 75%;
+    height: 100%;  
+    margin-left: 15%;
 }
 
 .nav-link.active{

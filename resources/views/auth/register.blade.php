@@ -20,12 +20,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
 </head>
 
 <body>
 
-<div class="register_Header_Letters">Hola, </div>
-<div class="register_Header_Letters">regístrate ahora : </div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -105,6 +104,7 @@
                             </div>
                         </div>
 
+                        
                         <div class="row mb-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end"></label>
 
@@ -113,21 +113,24 @@
                                     <span class="input-group-text" id="basic-addon1"> <i class="fas fa-unlock-alt"></i></span>
 
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Password">
-                                </div>
+                            </div>
                             </div>
                         </div>               
                     </form>
 
-                    <div class="justify-content-center">
-                            <div class="col-md-6 mb-3 offset-md-4">
+                    <div class="container">
+
+                    <div class="row justify-content-center">
+                            <div class="col-md-6 mb-3">
                                 <button type="submit" class="btn btn-primary" id="register_button">
                                     {{ __('Register') }}
                                 </button>
                             </div>
                         
                             <div>
-                            <a class="loginLink" href="{{ route('login') }}">¿Ya tienes cuenta? Inicia sesión aquí</a>
+                            <a href="{{ route('login') }}">¿Ya tienes cuenta?   Inicia sesión aquí</a>
                             </div>
+                    </div>
                     </div>
                 </div>
             </div>
