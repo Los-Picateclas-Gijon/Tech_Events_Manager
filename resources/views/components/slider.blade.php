@@ -1,18 +1,18 @@
-<div class=" d-flex row justify-content-center">
-    <div id="carouselExampleIndicators" class="carousel slide w-50" data-bs-ride="carousel">
-        <div class="carousel-indicators">
+<div id="carouselcontainer" class="col-sm-12 col-md-12 col-lg-12 col-xl-12 auto d-flex justify-content-center mt-5">
+    <div id="carouselExampleIndicators" class="carousel slide auto d-flex justify-content-center" data-bs-ride="carousel" >
+        <div class="carousel-indicators" id="indic">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active" data-bs-interval="4000">
                 <img src="https://loremflickr.com/680/480/dog" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="4000">
                 <img src="https://loremflickr.com/680/480/cat" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="4000">
                 <img src="https://loremflickr.com/680/480/bird" class="d-block w-100" alt="...">
             </div>
         </div>
