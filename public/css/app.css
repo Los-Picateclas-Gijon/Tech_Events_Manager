@@ -1,5 +1,106 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
+#boton {
+  background-color: #7879F1;
+  border-radius: 40%;
+  -webkit-margin-start: 25%;
+          margin-inline-start: 25%;
+  height: 85%;
+}
+
+.text {
+  color: #5865F2;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.nav-link.active {
+  color: #5865F2;
+  border-bottom: 3px solid #5865F2;
+}
+
+.navCenter {
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  background-color: chartreuse;
+}
+
+#register_button {
+  background-color: #7879F1;
+  border-radius: 15%;
+  width: 75%;
+  height: 100%;
+  margin-left: 15%;
+}
+
+.nav-link.active {
+  color: #5865F2;
+  border-bottom: 3px solid #5865F2;
+}
+
+#carouselcontainer {
+  margin: 0 auto;
+}
+
+#carouselExampleIndicators {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  #carouselExampleIndicators {
+    max-width: 450px;
+  }
+}
+@media (min-width: 768px) {
+  #carouselExampleIndicators {
+    max-width: 420px;
+  }
+}
+@media (min-width: 1200px) {
+  #carouselExampleIndicators {
+    max-width: 300px;
+  }
+}
+.carousel-inner {
+  border-radius: 8px;
+  filter: drop-shadow(5px 5px 5px #b2b2b3);
+}
+
+.carousel .carousel-indicators [data-bs-target] {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 10px;
+  /* change width */
+  height: 10px;
+  /* change height */
+  padding: 0;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #c4c4c4;
+  background-clip: padding-box;
+  border: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: 0.9;
+  transition: opacity 0.6s ease;
+  border-radius: 100%;
+}
+
+#indic {
+  bottom: -50px;
+  filter: drop-shadow(1px 1px 5px #b2b2b3);
+}
+
+#indic .active {
+  background-color: #7879F1;
+}
+
 #header {
   background-color: #98ABF1;
   height: 10rem;
