@@ -18,24 +18,40 @@ $login-btn: #7879F1;
 $register-btn: #5D5FEF;
 $header-btn: 5rem;
 
-
 #header {
     background-color: $header-bg;
-    height: 10%;
+    height: 10rem;
 }
 
 #footer {
     background-color: $footer-bg;
-    height: 10%;
+    height: 10rem;
+
+    #copy-text{
+        font-size: 2rem;
+        color: $white-text;
+    }
 }
 
 #login-btn {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
     background-color: $login-btn;
     color: $white-text;
+    border-radius: 40px;
+    width: 10rem;
+    height: 4rem;
 }
 
 #register-btn {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
     background-color: $register-btn;
     color: $white-text;
-    width: $header-btn;
+    border-radius: 40px;
+    width: 12rem;
+    height: 4rem;
 }
+

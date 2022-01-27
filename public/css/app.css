@@ -2,23 +2,38 @@
 @charset "UTF-8";
 #header {
   background-color: #98ABF1;
-  height: 10%;
+  height: 10rem;
 }
 
 #footer {
   background-color: #98ABF1;
-  height: 10%;
+  height: 10rem;
+}
+#footer #copy-text {
+  font-size: 2rem;
+  color: #FCFCFC;
 }
 
 #login-btn {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
   background-color: #7879F1;
   color: #FCFCFC;
+  border-radius: 40px;
+  width: 10rem;
+  height: 4rem;
 }
 
 #register-btn {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
   background-color: #5D5FEF;
   color: #FCFCFC;
-  width: 5rem;
+  border-radius: 40px;
+  width: 12rem;
+  height: 4rem;
 }
 
 /*!
