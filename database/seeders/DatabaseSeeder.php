@@ -12,10 +12,11 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+    { 
+        \App\Models\Role::factory(2)->create();
          \App\Models\User::factory(30)->create();
          \App\Models\Event::factory(50)->create();
          \App\Models\Location::factory(10)->create();
-         \App\Models\Role::factory(2)->create();
+        
     }
 }

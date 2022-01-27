@@ -14,7 +14,8 @@ class RoleFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name_role' => "user",
+        
         ];
     }
 }
