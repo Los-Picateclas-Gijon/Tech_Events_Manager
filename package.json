@@ -21,10 +21,7 @@
         "sass-loader": "^11.0.1"
     },
     "dependencies": {
-<<<<<<< HEAD
         "@fortawesome/fontawesome-free": "^5.15.4"
-=======
         "bootstrap-icons": "^1.7.2"
->>>>>>> origin/caio
     }
 }
