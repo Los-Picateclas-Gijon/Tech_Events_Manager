@@ -73,8 +73,13 @@
                     </ul>
                 </div>
             </div>
+<<<<<<< HEAD
         </nav> -->
 
+=======
+        </nav>
+        
+>>>>>>> b6edb4e07cdb444c8f85c4f890bc41ab3989a9f7
         <main class="py-4">
             @yield('content')
         </main>
