@@ -22,7 +22,8 @@ $letters_navBar_login_register: #5865F2;
 .nav-link.active{
     color: $letters_navBar_login_register;
     border-bottom: 3px solid $letters_navBar_login_register;
-  
+}
+
 #carouselcontainer{
   margin: 0 auto;
 }
@@ -81,4 +82,3 @@ $letters_navBar_login_register: #5865F2;
 #indic .active{
   background-color: #7879F1;
 }
-
