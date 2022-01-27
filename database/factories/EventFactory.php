@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Location;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class EventFactory extends Factory
@@ -14,7 +15,16 @@ class EventFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->title(),
+            'image' => 'https://picsum.photos/800/600',
+            'description'=> $this->faker->text(),
+            'date' => $this->faker->date(),
+            'hour'=> $this->faker->time(),
+            'current_capacity'=> $this->faker->numberBetween(10,100) ,
+            'max_capacity'=> $this->faker->numberBetween(10,100),
+            'location_id'=> Location::factory()->create()->id,
+     
+    
         ];
     }
 }
