@@ -16,7 +16,7 @@ class EventFactory extends Factory
     {
         return [
             'title' => $this->faker->title(),
-            'image' => 'https://loremflickr.com/680/480/dog',
+            'image' => 'https://picsum.photos/800/600',
             'description'=> $this->faker->text(),
             'date' => $this->faker->date(),
             'hour'=> $this->faker->time(),
