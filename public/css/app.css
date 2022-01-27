@@ -4606,7 +4606,6 @@ readers do not read off random characters that represent icons */
   font-weight: 900; }
 
 @charset "UTF-8";
-<<<<<<< HEAD
 #boton {
   background-color: #7879F1;
   border-radius: 40%;
@@ -4620,21 +4619,11 @@ readers do not read off random characters that represent icons */
   display: flex;
   flex-direction: column;
   text-align: center;
-=======
-<<<<<<< HEAD
-#register_button {
-  background-color: #7879F1;
-  border-radius: 15%;
-  width: 75%;
-  height: 100%;
-  margin-left: 15%;
->>>>>>> e514132123b224acfe863b8050bd67d210b60b03
 }
 
 .nav-link.active {
   color: #5865F2;
   border-bottom: 3px solid #5865F2;
-<<<<<<< HEAD
 }
 
 .navCenter {
@@ -4644,8 +4633,21 @@ readers do not read off random characters that represent icons */
 
 .body {
   background-color: chartreuse;
-=======
-=======
+}
+
+#register_button {
+  background-color: #7879F1;
+  border-radius: 15%;
+  width: 75%;
+  height: 100%;
+  margin-left: 15%;
+}
+
+.nav-link.active {
+  color: #5865F2;
+  border-bottom: 3px solid #5865F2;
+}
+
 #carouselcontainer {
   margin: 0 auto;
 }
@@ -4703,8 +4705,6 @@ readers do not read off random characters that represent icons */
 
 #indic .active {
   background-color: #7879F1;
->>>>>>> b6edb4e07cdb444c8f85c4f890bc41ab3989a9f7
->>>>>>> e514132123b224acfe863b8050bd67d210b60b03
 }
 
 /*!

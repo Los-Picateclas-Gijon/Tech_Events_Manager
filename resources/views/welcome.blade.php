@@ -23,7 +23,7 @@
     
     <x-slider />
     
-    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0 mt-5">
+    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0 mt-3">
         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
     </div>
 </body>
