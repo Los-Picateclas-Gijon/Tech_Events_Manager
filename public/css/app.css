@@ -2,6 +2,10 @@
 @charset "UTF-8";
 #register_button {
   background-color: #7879F1;
+  border-radius: 15%;
+  width: 75%;
+  height: 100%;
+  margin-left: 15%;
 }
 
 .nav-link.active {
