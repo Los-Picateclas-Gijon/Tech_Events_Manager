@@ -1,8 +1,12 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+
 // Variables
 @import 'variables';
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-// @import '~@fortawesome/fontawesome-free/css/all.css'
+#footer {
+    background-color: #98ABF1;
+}
