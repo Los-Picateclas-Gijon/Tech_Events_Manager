@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Event;
 use App\Http\Requests\StoreEventRequest;
 use App\Http\Requests\UpdateEventRequest;
+use GuzzleHttp\Psr7\Request;
 
 class EventController extends Controller
 {
@@ -15,7 +16,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        $events=Event::paginate(3);
+        return view('home',$events);
     }
 
     /**
@@ -25,7 +27,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+       return view('events.create');
     }
 
     /**
@@ -34,9 +36,18 @@ class EventController extends Controller
      * @param  \App\Http\Requests\StoreEventRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreEventRequest $request)
+    public function store(Request $request)
     {
-        //
+        $event=new Event();
+        $event->event_tittle=$request('event_tittle');
+        $event->event_image=$request('event_image');
+        $event->event_description=$request('event_description');
+        $event->event_date=$request('event_date');
+        $event->event_hour=$request('event_hour');
+        $event->event_current_capacity=$request('event_current_capacity');
+        $event->event_max_capacity=$request('max_capacity');
+        $event->event_location_id=$request('location_id');
+        $event->saveOrFail();
     }
 
     /**
