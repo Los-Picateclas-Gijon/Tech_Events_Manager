@@ -3,7 +3,7 @@
     <a href="/" class="col text-decoration-none ms-5"><img src="{{ asset ('images/tlogo.png') }}" alt="Logo"></a>
 
     <div class="m-4">
-        <button type="button" id="login-btn" class="btn me-2">Login</button>
-        <button type="button" id="register-btn" class="btn me-3">Register</button>
+        <button type="button" id="login-btn" class=" btn me-2 "><a href="{{ route('login') }}" style="text-decoration: none"><p style="color: white">Login</p></a></button>
+        <button type="button" id="register-btn" class="btn me-3"><a href="{{ route('register') }}"style="text-decoration: none"><p style="color: white">Register</p></a></button>
     </div>
 </div>
