@@ -2,7 +2,10 @@
 
 namespace App\View\Components;
 
+use App\Models\Event;
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\DB;
+
 
 class Cards extends Component
 {
@@ -13,7 +16,7 @@ class Cards extends Component
      */
     public function __construct()
     {
-        //
+
     }
 
     /**
@@ -23,6 +26,7 @@ class Cards extends Component
      */
     public function render()
     {
-        return view('components.cards');
+        $events = DB::select('select * from events');
+        return view('components.cards', ['events' => $events]);
     }
 }

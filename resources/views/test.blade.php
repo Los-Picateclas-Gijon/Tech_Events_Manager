@@ -8,8 +8,11 @@
 
 <body>
     <x-header />
+    <h1>Eventos destacados</h1>
     <x-slider />
+    <h1>Eventos disponibles</h1>
     <x-cards />
+    <h1>Eventos pasados</h1>
     <x-cards />
     <x-footer />
 </body>

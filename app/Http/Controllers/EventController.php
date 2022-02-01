@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Event;
 use App\Http\Requests\StoreEventRequest;
 use App\Http\Requests\UpdateEventRequest;
+use Illuminate\Support\Facades\DB;
 
 class EventController extends Controller
 {
@@ -13,9 +14,11 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        //
+        $events = DB::select('select * from events');
+        return view('test', ['events' => $events]);
     }
 
     /**
