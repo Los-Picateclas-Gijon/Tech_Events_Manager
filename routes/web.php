@@ -22,3 +22,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/layouts/profile',[App\Http\ProfileController::class, 'index'])->name('profile');
 Route::get('/layouts/admin',[App\Http\ProfileController::class, 'index'])->name('admin');
+Route::get('/hola',function(){return view('hola');});

@@ -16,7 +16,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events=Event::paginate(3);
+        $events=Event::paginate(5);
         return view('home',$events);
     }
 
@@ -38,16 +38,7 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        $event=new Event();
-        $event->event_tittle=$request('event_tittle');
-        $event->event_image=$request('event_image');
-        $event->event_description=$request('event_description');
-        $event->event_date=$request('event_date');
-        $event->event_hour=$request('event_hour');
-        $event->event_current_capacity=$request('event_current_capacity');
-        $event->event_max_capacity=$request('max_capacity');
-        $event->event_location_id=$request('location_id');
-        $event->saveOrFail();
+       
     }
 
     /**
