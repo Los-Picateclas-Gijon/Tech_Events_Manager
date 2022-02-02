@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-between mt-3">
-    <h1 class="ms-3 fw-bold">Eventos disponibles...</h1>
+    <h1 class="ms-3 fw-bold">Eventos pasados...</h1>
     <h2 class="me-3">Ver todos</h2>
 </div>
 <div class="row row-cols-1 row-cols-md-2 d-flex flex-row flex-nowrap overflow-auto mt-3">

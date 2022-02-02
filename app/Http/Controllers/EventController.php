@@ -17,8 +17,7 @@ class EventController extends Controller
 
     public function index()
     {
-        $events = DB::select('select * from events');
-        return view('test', ['events' => $events]);
+        return view('test');
     }
 
     /**

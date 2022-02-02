@@ -5,7 +5,7 @@ namespace App\View\Components;
 use Illuminate\View\Component;
 use Illuminate\Support\Facades\DB;
 
-class Cards extends Component
+class CardsPast extends Component
 {
     /**
      * Create a new component instance.
@@ -14,7 +14,7 @@ class Cards extends Component
      */
     public function __construct()
     {
-
+        //
     }
 
     /**
@@ -25,6 +25,6 @@ class Cards extends Component
     public function render()
     {
         $events = DB::select('select * from events');
-        return view('components.cards', ['events' => $events]);
+        return view('components.cards-past', ['events' => $events]);
     }
 }
