@@ -3,8 +3,10 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\DB;
 
-class admin.card extends Component
+
+class AdminCard extends Component
 {
     /**
      * Create a new component instance.
@@ -23,7 +25,7 @@ class admin.card extends Component
      */
     public function render()
     {
-
-        return view('components.admin.card');
+        $events = DB::select('select * from events');
+        return view('components.admin-card', ['events' => $events]);
     }
 }
