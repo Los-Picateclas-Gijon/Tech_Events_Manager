@@ -9,7 +9,8 @@
         <div class="card-body">
           <h5 class="card-title">{{ $event->title }}</h5>
           <p class="card-text">{{ $event->description }}</p>
-          <p class="card-text"><small class="text-muted">{{ $event->date }}</small></p>
+          <p class="card-text"><small class="text-muted">{{ \Carbon\Carbon::parse($event->date)->format('d/m/Y')}}
+</small></p>
           <p class="card-text"><small class="text-muted">{{ $event->hour }}</small></p>
           <p class="card-text"><small class="text-muted">{{ $event->location_id }}</small></p>
 
