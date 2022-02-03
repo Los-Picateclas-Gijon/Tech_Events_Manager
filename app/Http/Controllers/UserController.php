@@ -9,7 +9,7 @@ class UserController extends Controller
     public function index()
     {
         $events=Event::paginate(5);
-        return view('user',$events);
+        return view('events',$events);
     }
 
     public function create(Request $request){

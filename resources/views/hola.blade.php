@@ -3,3 +3,4 @@
 hola
 <x-header />
 <x-footer />
+<x-slider />

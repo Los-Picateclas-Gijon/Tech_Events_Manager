@@ -17,7 +17,7 @@ class EventController extends Controller
     public function index()
     {
         $events=Event::paginate(5);
-        return view('home',$events);
+        return view('events')->with('events',$events);
     }
 
     /**
@@ -38,7 +38,19 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-       
+        $event=new Event();
+
+        $event->name=$request->get('title');
+        $event->image=$request->get('image');
+        $event->description=$request->get('description');
+        $event->date=$request->get('date');
+        $event->hour=$request->get('hour');
+        $event->current_capacity=$request->get('home');
+        $event->max_capacity=$request->get('max_capacity');
+        $event->location_id=$request->get('home');
+
+        $event->save();
+        return redirect('/events');
     }
 
     /**
@@ -47,9 +59,10 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event)
+    public function show($id)
     {
-        //
+        $event=Event::find($id);
+        return view('event.show')->with('event',$event);
     }
 
     /**
@@ -58,9 +71,10 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function edit(Event $event)
+    public function edit($id)
     {
-        //
+        $event=Event::find($id);
+        return view('event.edit')->with('event',$event);
     }
 
     /**
@@ -70,9 +84,21 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateEventRequest $request, Event $event)
+    public function update(UpdateEventRequest $request, Event $event,$id)
     {
-        //
+        $event=Event::find($id);
+        
+        $event->name=$request->get('title');
+        $event->image=$request->get('image');
+        $event->description=$request->get('description');
+        $event->date=$request->get('date');
+        $event->hour=$request->get('hour');
+        $event->current_capacity=$request->get('home');
+        $event->max_capacity=$request->get('max_capacity');
+        $event->location_id=$request->get('home');
+
+        $event->save();
+        return redirect('/events');
     }
 
     /**
@@ -81,8 +107,10 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Event $event)
+    public function destroy($id)
     {
-        //
+        $event=Event::find($id);
+        $event->delete();
+        return redirect('/events');
     }
 }
