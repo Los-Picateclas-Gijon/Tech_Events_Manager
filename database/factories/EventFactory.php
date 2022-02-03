@@ -15,7 +15,7 @@ class EventFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->title(),
+            'title' => $this->faker->catchPhrase(),
             'image' => 'https://picsum.photos/800/600',
             'description'=> $this->faker->text(),
             'date' => $this->faker->date(),
