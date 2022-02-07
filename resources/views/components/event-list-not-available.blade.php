@@ -1,7 +1,5 @@
-
-<link href="{{ asset('css/app.css') }}" rel="stylesheet">   
-
-<nav class="navbar navbar-light bg-light">
+<div>
+ <nav class="navbar navbar-light bg-light">
   <div class="container">
   <h1><strong>Eventos no disponibles</strong></h1>
     <a class="navbar-brand" href="/welcome">
@@ -36,3 +34,4 @@
 </div>
 </div>
 @endforeach
+</div>
