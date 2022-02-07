@@ -22,6 +22,9 @@
                         <p class="card-text"><small class="text-muted fw-bold">{{ $event->max_capacity }}</small></p>
                     </div>
                 </div>
+                <div class="d-flex justify-content-center" >
+                    <button type="button" id="btn-sign" class="btn btn-primary rounded-pill">Apúntame!</button>
+                </div>
             </div>
         </div>
     @endforeach
