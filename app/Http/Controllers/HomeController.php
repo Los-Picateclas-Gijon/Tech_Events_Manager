@@ -26,6 +26,6 @@ class HomeController extends Controller
         //si eres usuario
         return view('home');
         //si eres admin
-        return view('admin')
+        return view('admin');
     }
 }
