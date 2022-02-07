@@ -57,7 +57,7 @@
 }
 @media (min-width: 768px) {
   #carouselExampleIndicators {
-    max-width: 420px;
+    max-width: 450px;
   }
 }
 @media (min-width: 1200px) {
@@ -135,6 +135,11 @@
   border-radius: 40px;
   width: 12rem;
   height: 4rem;
+}
+
+#btn-sign {
+  background-color: #7879F1;
+  border-color: #7879F1;
 }
 
 /*!
