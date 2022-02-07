@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,4 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/eventListAvailable', [App\Http\Controllers\EventList::class, 'index'])->name('eventListAvailable');
+Route::get('/eventListNotAvailable', [App\Http\Controllers\EventListNotAvaible::class, 'index'])->name('eventListNotAvailable');
 
