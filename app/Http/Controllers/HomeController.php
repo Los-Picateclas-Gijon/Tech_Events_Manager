@@ -23,6 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        //si eres usuario
         return view('home');
+        //si eres admin
+        return view('admin');
     }
 }
