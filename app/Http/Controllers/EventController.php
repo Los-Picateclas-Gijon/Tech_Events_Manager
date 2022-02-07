@@ -40,14 +40,14 @@ class EventController extends Controller
     {
         $event=new Event();
 
-        $event->name=$request->get('title');
-        $event->image=$request->get('image');
-        $event->description=$request->get('description');
-        $event->date=$request->get('date');
-        $event->hour=$request->get('hour');
-        $event->current_capacity=$request->get('home');
-        $event->max_capacity=$request->get('max_capacity');
-        $event->location_id=$request->get('home');
+        $event->name=$request->input('title');
+        $event->image=$request->input('image');
+        $event->description=$request->input('description');
+        $event->date=$request->input('date');
+        $event->hour=$request->input('hour');
+        $event->current_capacity=$request->input('home');
+        $event->max_capacity=$request->input('max_capacity');
+        $event->location_id=$request->input('home');
 
         $event->save();
         return redirect('/events');
@@ -88,14 +88,14 @@ class EventController extends Controller
     {
         $event=Event::find($id);
         
-        $event->name=$request->get('title');
-        $event->image=$request->get('image');
-        $event->description=$request->get('description');
-        $event->date=$request->get('date');
-        $event->hour=$request->get('hour');
-        $event->current_capacity=$request->get('home');
-        $event->max_capacity=$request->get('max_capacity');
-        $event->location_id=$request->get('home');
+        $event->name=$request->input('title');
+        $event->image=$request->input('image');
+        $event->description=$request->input('description');
+        $event->date=$request->input('date');
+        $event->hour=$request->input('hour');
+        $event->current_capacity=$request->input('home');
+        $event->max_capacity=$request->input('max_capacity');
+        $event->location_id=$request->input('home');
 
         $event->save();
         return redirect('/events');
