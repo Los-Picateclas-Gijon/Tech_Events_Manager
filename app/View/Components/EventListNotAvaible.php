@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\Component;
 
 class EventListNotAvaible extends Component
@@ -23,6 +24,9 @@ class EventListNotAvaible extends Component
      */
     public function render()
     {
-        return view('components.event-list-not-avaible');
+        // return view('components.event-list-not-avaible');
+
+        $events = DB::select('select * from events');
+        return view('components.event-list-not-available', ['events'=>$events]);
     }
 }

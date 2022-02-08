@@ -7,7 +7,11 @@
     <title>Event List Available</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
-<x-event-list />
-</body>
+    <body>
+        <x-header />
+
+        <x-event-list :events="$events"/>
+
+        <x-footer />
+    </body>
 </html>

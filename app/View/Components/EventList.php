@@ -27,8 +27,6 @@ class EventList extends Component
     public function render()
     {
         $events = DB::select('select * from events');
-        dd($events);
         return view('components.event-list', ['events'=>$events]);
-        
     }
 }

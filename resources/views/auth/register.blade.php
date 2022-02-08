@@ -117,22 +117,22 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
 
-                        <div class="container">
+                            <div class="container">
 
-                            <div class="row justify-content-center">
-                                <div class="col-md-6 mb-3">
-                                    <button type="submit" class="btn btn-primary rounded-pill" id="register_button">
-                                        {{ __('Register') }}
-                                    </button>
-                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 mb-3">
+                                        <button type="submit" class="btn btn-primary rounded-pill" id="register_button">
+                                            {{ __('Register') }}
+                                        </button>
+                                    </div>
 
-                                <div class="text">
-                                    <a href="{{ route('login') }}">¿Ya tienes cuenta? Inicia sesión aquí</a>
+                                    <div class="text">
+                                        <a href="{{ route('login') }}">¿Ya tienes cuenta? Inicia sesión aquí</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -10,6 +10,6 @@ class EventList extends Controller
     public function index(){
 
         $events = Event::all();
-        return view('components.event-list', ['events'=>$events]); 
-}
+        return view('eventListAvailable', ['events'=>$events]);
+    }
 }

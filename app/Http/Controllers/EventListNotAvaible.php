@@ -10,6 +10,7 @@ class EventListNotAvaible extends Controller
     public function index(){
 
         $events = Event::all();
-        return view('components.event-list-not-available', ['events'=>$events]); 
+        return view('eventListNotAvailable', ['events'=>$events]);
+
 }
 }
