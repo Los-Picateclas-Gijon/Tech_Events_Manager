@@ -11,4 +11,3 @@
 <x-event-list-not-available /> 
 </body>
 </html>
-<x-event-list-not-available />
