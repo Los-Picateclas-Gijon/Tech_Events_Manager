@@ -1,4 +1,4 @@
-<div id="footer" class="footer fixed-bottom py-3">
+<div id="footer" class="footer py-3">
     <div class="d-flex flex-row justify-content-center align-content-center mt-4">
         <div class="me-4">
             <a href="#" class="text-decoration-none">

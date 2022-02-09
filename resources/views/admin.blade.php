@@ -8,3 +8,4 @@
     {!! $events->links() !!}
 </div>
 
+<x-footer />
