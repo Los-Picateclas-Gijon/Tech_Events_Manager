@@ -19,4 +19,8 @@ protected $fillable = [
     'max_capacity',
     'location_id',
 ];
+public function location()
+    {
+        return $this->hasMany(Location::class);
+    }
 }

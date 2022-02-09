@@ -28,7 +28,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return ('admin');
     }
 
     /**
@@ -39,8 +39,28 @@ class EventController extends Controller
      */
     public function store(StoreEventRequest $request)
     {
-        //
+        /*$data = new Event;
+        $data = $request->all();
+        $data ->save();
+        return view('admin');*/
+
+        $request->validate([
+            'title' => 'required',
+            'image' => 'required',
+            'date' => 'required',
+            'hour' => 'required',
+            'current_capacity' => 'required',
+            'max_capacity' => 'required',
+            'location_id' => 'required',
+
+        ]);
+
+        Event::create($request->all());
+
+        return redirect()->route('admin');
     }
+
+
 
     /**
      * Display the specified resource.
@@ -71,10 +91,12 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateEventRequest $request, Event $event)
+    public function update(UpdateEventRequest $request, Event $event, $id)
     {
-        //
+        $event = Event::where('id', $id)->update($request->all());
+        return response()->db($event, 'admin');
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -82,8 +104,10 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Event $event)
+    public function destroy(Event $event, $id)
     {
-        //
+        $event = Event::findOrFail($id)->delete();
+
+        return response();
     }
 }
