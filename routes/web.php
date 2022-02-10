@@ -35,3 +35,6 @@ Route::get('/admin', [App\Http\Controllers\EventController::class, 'index'])->na
 
 Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->middleware('auth')->name('user');
 Route::delete('/users', [App\Http\Controllers\UserController::class, 'destroy'])->middleware('auth')->name('user.destroy');
+Route::get('/admin/create', function(){
+    return view('createEvent');
+});
