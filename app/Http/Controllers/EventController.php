@@ -92,7 +92,7 @@ class EventController extends Controller
     public function update(UpdateEventRequest $request, Event $event, $id)
     {
         $event = Event::where('id', $id)->update($request->all());
-        return response()->db($event, 'admin');
+        return view('admin');
     }
 
 
@@ -106,6 +106,6 @@ class EventController extends Controller
     {
         $event = Event::findOrFail($id)->delete();
 
-        return response();
+        return view('admin');
     }
 }
