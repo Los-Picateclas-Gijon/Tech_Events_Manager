@@ -31,7 +31,7 @@ Route::put('/events/{id}', [App\Http\Controllers\AdminController::class, 'edit']
 Route::get('/events/{id}', [App\Http\Controllers\AdminController::class, 'update'])->name('events.update');
 Route::delete('/events/{id}', [App\Http\Controllers\AdminController::class, 'destroy'])->name('events.destroy');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/test', [App\Http\Controllers\EventController::class, 'index'])->name('admin.index');
+Route::get('/admin', [App\Http\Controllers\EventController::class, 'index'])->name('admin.index');
 
 Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->middleware('auth')->name('user');
 Route::delete('/users', [App\Http\Controllers\UserController::class, 'destroy'])->middleware('auth')->name('user.destroy');
