@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
-use App\Http\Requests\StoreEventRequest;
 use App\Http\Requests\UpdateEventRequest;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -28,7 +30,8 @@ class EventController extends Controller
      */
     public function create()
     {
-        return ('admin');
+        return view('createEvent');
+      
     }
 
     /**
@@ -37,14 +40,30 @@ class EventController extends Controller
      * @param  \App\Http\Requests\StoreEventRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreEventRequest $request)
+    public function store(Request $request)
     {
+        
+            $event=Event::create([
+                'title'=>$request->input('title'),
+                'image'=>$request->input('image'),
+                'description'=>$request->input('description'),
+                'date'=>$request->input('date'),
+                'hour'=>$request->input('hour'),
+                'max_capacity'=>$request->input('max_capacity'),
+                'current_capacity'=> 0,
+                'location_id'=>1,
+                 
+             ]);
+            $event->save();
+            return redirect()->route('admin.index'); 
+
+
         /*$data = new Event;
         $data = $request->all();
         $data ->save();
         return view('admin');*/
-
-        $request->validate([
+       
+      /*  $request->validate([
             'title' => 'required',
             'image' => 'required',
             'date' => 'required',
@@ -54,10 +73,21 @@ class EventController extends Controller
             'location_id' => 'required',
 
         ]);
-
+        
         Event::create($request->all());
-
+        
         return redirect()->route('admin');
+        $event= new Event;
+        $event->title=$request->input('title');
+        $event->image=$request->input('image');
+        $event->date=$request->input('date');
+        $event->hour=$request->input('hour');
+        $event->max_capacity=$request->input('max_capacity');
+        $event->location_id=$request->input('location_id');
+        $event->save();
+        return redirect()->route('admin');*/
+      
+        
     }
 
 

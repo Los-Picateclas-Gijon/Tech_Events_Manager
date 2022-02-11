@@ -24,7 +24,13 @@ class StoreEventRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required|unique:events',
+            'image' => 'required',
+            'date' => 'required',
+            'hour' => 'required',
+            //'current_capacity' => 'required',
+            'max_capacity' => 'required',
+            //'location_id' => 'required',
         ];
     }
 }

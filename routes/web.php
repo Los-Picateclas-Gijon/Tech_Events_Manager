@@ -23,9 +23,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->midd
 Route::get('/eventListAvailable', [App\Http\Controllers\EventList::class, 'index'])->name('eventListAvailable');
 Route::get('/eventListNotAvailable', [App\Http\Controllers\EventListNotAvaible::class, 'index'])->name('eventListNotAvailable');
 
-Route::get('/events', [App\Http\Controllers\AdminController::class, 'index'])->name('events');
-Route::post('/events', [App\Http\Controllers\AdminController::class, 'create'])->name('events.create');
-Route::get('/events', [App\Http\Controllers\AdminController::class, 'store'])->name('events.store');
+Route::get('/events', [App\Http\Controllers\EventController::class, 'index'])->name('events');
+Route::get('/events/create', [App\Http\Controllers\EventController::class, 'create'])->name('events.create');
+Route::post('/events', [App\Http\Controllers\EventController::class, 'store'])->name('events.store');
 Route::get('/events/{id}', [App\Http\Controllers\AdminController::class, 'show'])->name('events.show');
 Route::put('/events/{id}', [App\Http\Controllers\AdminController::class, 'edit'])->name('events.edit');
 Route::get('/events/{id}', [App\Http\Controllers\AdminController::class, 'update'])->name('events.update');
@@ -37,4 +37,4 @@ Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->mid
 Route::delete('/users', [App\Http\Controllers\UserController::class, 'destroy'])->middleware('auth')->name('user.destroy');
 Route::get('/admin/create', function(){
     return view('createEvent');
-});
+})->middleware('auth');

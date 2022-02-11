@@ -20,7 +20,7 @@ class CreateEventsTable extends Migration
             $table->text('description');
             $table->string('date');
             $table->string('hour');
-            $table->integer('current_capacity');
+            $table->integer('current_capacity')->default(0);
             $table->integer('max_capacity');
             $table->unsignedBigInteger('location_id');
             $table->timestamps();
