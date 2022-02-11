@@ -2,7 +2,7 @@
   <nav class="navbar navbar-light bg-light">
     <div class="container">
       <h1><strong>Próximos eventos</strong></h1>
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <img src="{{ asset('storage/arrow-back.png') }}" alt="" width="30" height="24">
       </a>
     </div>
