@@ -1,11 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
-#boton {
+#login_button {
   background-color: #7879F1;
-  border-radius: 40%;
-  -webkit-margin-start: 25%;
-          margin-inline-start: 25%;
-  height: 85%;
+  color: #FCFCFC;
+  font-weight: bold;
+  text-align: center;
 }
 
 .text {
@@ -31,10 +30,9 @@
 
 #register_button {
   background-color: #7879F1;
-  border-radius: 15%;
-  width: 75%;
-  height: 100%;
-  margin-left: 15%;
+  color: #FCFCFC;
+  font-weight: bold;
+  text-align: center;
 }
 
 .nav-link.active {
@@ -103,38 +101,27 @@
 
 #header {
   background-color: #98ABF1;
-  height: 10rem;
 }
 
 #footer {
   background-color: #98ABF1;
-  height: 10rem;
 }
 #footer #copy-text {
-  font-size: 2rem;
   color: #FCFCFC;
 }
 
 #login-btn {
-  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   background-color: #7879F1;
   color: #FCFCFC;
-  border-radius: 40px;
-  width: 10rem;
-  height: 4rem;
 }
 
 #register-btn {
-  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   background-color: #5D5FEF;
   color: #FCFCFC;
-  border-radius: 40px;
-  width: 12rem;
-  height: 4rem;
 }
 
 #btn-sign {

@@ -5,12 +5,13 @@ $button-color: #7879F1;
 $font-family-sans-serif: 'Poppins', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+$white-text: #FCFCFC;
 
-#boton {
+#login_button {
     background-color: $button-color;
-    border-radius: 40%;
-    margin-inline-start: 25%;
-    height: 85%;
+    color: $white-text;
+    font-weight: bold;
+    text-align: center;
 }
 
 .text {
@@ -43,10 +44,9 @@ $letters_navBar_login_register: #5865F2;
 
 #register_button {
     background-color: $register_button-color;
-    border-radius: 15%;
-    width: 75%;
-    height: 100%;
-    margin-left: 15%;
+    color: $white-text;
+    font-weight: bold;
+    text-align: center;
 }
 
 .nav-link.active {
@@ -116,8 +116,6 @@ $letters_navBar_login_register: #5865F2;
     background-color: #7879F1;
 }
 
-$white-text: #FCFCFC;
-
 // Header
 $header-bg: #98ABF1;
 
@@ -131,37 +129,28 @@ $header-btn: 5rem;
 
 #header {
     background-color: $header-bg;
-    height: 10rem;
 }
 
 #footer {
     background-color: $footer-bg;
-    height: 10rem;
 
     #copy-text {
-        font-size: 2rem;
         color: $white-text;
     }
 }
 
 #login-btn {
-    font-size: 2rem;
     font-weight: bold;
     text-align: center;
     background-color: $login-btn;
     color: $white-text;
-    width: 10rem;
-    height: 4rem;
 }
 
 #register-btn {
-    font-size: 2rem;
     font-weight: bold;
     text-align: center;
     background-color: $register-btn;
     color: $white-text;
-    width: 12rem;
-    height: 4rem;
 }
 
 #btn-sign {
