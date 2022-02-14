@@ -83,7 +83,7 @@
 
                             <div class="row mb-0">
                                 <div class="d-grid gap-2 col-8 mx-auto">
-                                    <button type="submit" class="btn btn-primary btn-lg " id="boton">
+                                    <button type="submit" class="btn btn-primary btn-lg rounded-pill" id="boton">
                                         {{ __('Login') }}
                                     </button>
                                     <div class="text">

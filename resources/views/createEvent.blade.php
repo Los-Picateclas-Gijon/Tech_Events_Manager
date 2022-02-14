@@ -10,7 +10,7 @@
 
         <x-header />
 
-        <x-event-create />
+        <x-create />
 
         <x-footer />
 

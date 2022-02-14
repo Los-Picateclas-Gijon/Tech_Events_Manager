@@ -2,9 +2,10 @@
 
 namespace App\View\Components;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\Component;
 
-class eventCreate extends Component
+class Create extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +24,7 @@ class eventCreate extends Component
      */
     public function render()
     {
-        return view('components.event-create');
+        $events = DB::select('select * from events');
+        return view('components.create', ['events'=>$events]);
     }
 }
