@@ -1,7 +1,7 @@
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <x-header />
 <div class="d-flex justify-content-center">
-  <a href="/admin/create"><button class="btn btn-primary rounded-pill">New Event</button></a>
+  <a href="/admin/create"><button class="btn btn-primary rounded-pill">Añadir evento</button></a>
 </div>
 
 <x-admin-card />

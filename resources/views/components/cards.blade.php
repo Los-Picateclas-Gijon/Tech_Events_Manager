@@ -1,14 +1,14 @@
 <div>
     <div class="d-flex justify-content-between mt-3">
         <h1 class="ms-3 mt-3 fw-bold">Eventos disponibles...</h1>
-       <a href="/eventListAvailable"> 
+       <a href="/eventListAvailable">
        <h2 class="me-3">Ver todos</h2>
        </a>
     </div>
     <div class="row row-cols-1 row-cols-md-2 d-flex flex-row flex-nowrap overflow-auto mt-3">
         @foreach($events as $event)
-            <div class="card ms-3 mb-3 rounded-3 border-0 h-50">
-                <img src="{{ $event->image }}" class="card-img-top m-0" id="img_card">
+            <div class="card ms-3 mb-3 rounded-3 border-0">
+                <img src="{{ $event->image }}" class="card-img-top img-fluid rounded-3 m-0" id="img_card">
                 <div class="card-body">
                     <h5 class="card-title fs-2 fw-bold">{{ $event->title }}</h5>
                     <p class="card-text text-truncate">{{ $event->description }}</p>
