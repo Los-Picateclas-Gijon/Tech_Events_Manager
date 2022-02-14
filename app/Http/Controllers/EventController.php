@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use App\Http\Requests\UpdateEventRequest;
+use Illuminate\Http\Client\Request as ClientRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Symfony\Component\HttpFoundation\Request as HttpFoundationRequest;
 
 class EventController extends Controller
 {
@@ -19,7 +22,7 @@ class EventController extends Controller
 
     public function index()
     {
-        $events = Event::latest()->paginate(10);
+        $events =DB::table('events')->latest()->paginate(10);
         return view('admin', compact('events'));
     }
 
@@ -55,7 +58,7 @@ class EventController extends Controller
                  
              ]);
             $event->save();
-            return redirect()->route('admin.index'); 
+           return redirect()->route('admin.index') ;
 
 
         /*$data = new Event;
@@ -109,9 +112,10 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function edit(Event $event)
+    public function edit(Event $event,$id)
     {
-        //
+        $event=Event::findOrfail($id);
+        return view('edit',compact('event'));
     }
 
     /**
@@ -121,10 +125,20 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateEventRequest $request, Event $event, $id)
+    public function update(Request $request, Event $event, $id)
     {
-        $event = Event::where('id', $id)->update($request->all());
-        return view('admin');
+       
+        $event = Event::find($id);
+        $event->title=$request->title;
+        $event->image=$request->image;
+        $event->description=$request->description;
+        $event->date=$request->date;
+        $event->hour=$request->hour;
+        $event->max_capacity=$request->max_capacity;
+        $event->location_id=$request->location_id;    
+    
+        $event->save();
+        return view('admin',compact('event')); 
     }
 
 
@@ -138,6 +152,6 @@ class EventController extends Controller
     {
         $event = Event::findOrFail($id)->delete();
 
-        return view('admin');
+        return view('admin',compact('event'));
     }
 }
