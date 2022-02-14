@@ -6,8 +6,8 @@
             </a>
         </div>
         <div class="me-2">
-            <a href="{{ route('register') }}" type="button" id="login-btn" class="btn rounded-pill">Login</a>
-            <a href="{{ route('login') }}" type="button" id="register-btn" class="btn rounded-pill">Register</a>
+            <a href="{{ route('login') }}" type="button" id="login-btn" class="btn rounded-pill">Login</a>
+            <a href="{{ route('register') }}" type="button" id="register-btn" class="btn rounded-pill">Register</a>
         </div>
     </div>
 </div>
