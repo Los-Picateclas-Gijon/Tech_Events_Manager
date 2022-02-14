@@ -6,16 +6,14 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-    <body>
-        <x-header />
+<x-header />
 
-        <x-slider />
+<x-slider />
 
-        <x-cards />
+<x-cards />
 
-        <x-cards-past />
+<x-cards-past />
 
-        <x-footer />
-    </body>
+<x-footer />
 
 </html>
